@@ -4,7 +4,64 @@
 
 Lab assignments for the course Applied Machine Learning at the University of Amsterdam.
 
-## week 1
+## Installation
+
+```bash
+# If you haven't already
+git clone https://github.com/manyids2/UVA_AML24
+
+# Update to latest version
+cd UVA_AML24
+git pull
+```
+
+## Usage
+
+1. Open the folder `week_[x]` from your IDE.
+   ( If your working dir is PWD, the notebook should find
+   `local_tests/local_tests.pickle` and `automark.py` in the path )
+
+2. Update your username at the start of the notebook, and check progress to
+   ensure it works.
+
+   ```python
+   # fill in you student number as your username
+   username = "id3"
+
+   # to check your progress, you can run this function
+   am.get_progress(username)
+   ```
+
+3. Define your functions in the code where indicated:
+
+   ```python
+   def w1_linear_forward(x_input, P):
+       """Perform the Linear mapping of the input
+       # Arguments
+           x_input: input of the linear function - np.array of size `(n_objects, n_in)`
+           P: np.array of size `(n_in, n_out)`
+       # Output
+           the output of the linear function
+           np.array of size `(n_objects, n_out)`
+       """
+       #################
+       ### YOUR CODE ###
+       #################
+       return output
+   ```
+
+4. Test your answer (first tests locally from `local_tests/local_tests.pickle`,
+   then tests remotely and registers the answer)
+
+   ```python
+   am.test_student_function(username, w1_linear_forward, ["x_input", "P"])
+   ```
+
+5. Check progress as shown above in step 2.
+
+## Index
+
+### week 1
 
 week_1/Intro.ipynb
 
@@ -14,7 +71,7 @@ week_1/Intro.ipynb
 | w1_cal_pseudoinverse | ['x_input', 'y_input'] |
 | w1_L2_regression     | ['x_input', 'y_input'] |
 
-## week 2
+### week 2
 
 week_2/ML.ipynb
 
@@ -34,7 +91,7 @@ week_2/ML.ipynb
 | w2_tree_split_data_right    | ['X', 'Y', 'feature_index', 'split_value'] |
 | w2_tree_to_terminal         | ['Y']                                      |
 
-## week 3
+### week 3
 
 week_3/Neural_Nets.ipynb
 
@@ -47,29 +104,3 @@ week_3/Neural_Nets.ipynb
 | w3_box_blur        | ['image', 'box_size']       |
 | w3_maxpool_forward | ['x_input']                 |
 | w3_flatten_forward | ['x_input']                 |
-
-## list
-
-w1_linear_forward
-w1_cal_pseudoinverse
-w1_L2_regression
-w2_linear_forward
-w2_linear_grad_W
-w2_linear_grad_b
-w2_sigmoid_forward
-w2_sigmoid_grad_input
-w2_nll_forward
-w2_nll_grad_input
-w2_dist_to_training_samples
-w2_nearest_neighbors
-w2_tree_weighted_entropy
-w2_tree_split_data_left
-w2_tree_split_data_right
-w2_tree_to_terminal
-w3_dense_forward
-w3_relu_forward
-w3_l2_regularizer
-w3_conv_matrix
-w3_box_blur
-w3_maxpool_forward
-w3_flatten_forward
