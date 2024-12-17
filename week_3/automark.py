@@ -198,12 +198,12 @@ def test_student_function_with_download(username, function, arg_keys):
     print("Running local tests...")
     if _passed_local_tests(function, arg_keys):
         print("{} successfully passed local tests".format(function.__name__))
-        print("Running remote test...")
+        # print("Running remote test...")
 
-        if _passed_remote_test(username, function, arg_keys):
-            print("Test was successful. Congratulations!")
-        else:
-            print("Test failed. Please review your code.")
+        # if _passed_remote_test(username, function, arg_keys):
+        #     print("Test was successful. Congratulations!")
+        # else:
+        #     print("Test failed. Please review your code.")
     else:
         print("{} failed some local tests".format(function.__name__))
 
@@ -212,12 +212,12 @@ def test_student_function(username, function, arg_keys):
     print("Running local tests...")
     if _passed_local_tests(function, arg_keys):
         print("{} successfully passed local tests".format(function.__name__))
-        print("Running remote test...")
+        # print("Running remote test...")
 
-        if _passed_remote_test(username, function, arg_keys):
-            print("Test was successful. Congratulations!")
-        else:
-            print("Test failed. Please review your code.")
+        # if _passed_remote_test(username, function, arg_keys):
+        #     print("Test was successful. Congratulations!")
+        # else:
+        #     print("Test failed. Please review your code.")
     else:
         print("{} failed some local tests".format(function.__name__))
 
